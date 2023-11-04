@@ -1,7 +1,7 @@
 import "./App.css";
-import Navbar from "./Navbar.js";
-import Hero from "./Hero.js";
-import Footer from "./Footer.js";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 // import Link from "next/link";
 
 function App() {

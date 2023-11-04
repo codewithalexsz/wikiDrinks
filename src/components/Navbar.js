@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <nav className="">
+    <nav className="mb-9">
       <div className="navbar  max-w-custom m-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -25,13 +27,13 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a href="./public/index.html">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <a>Categories</a>
                 <ul className="p-2">
                   <li>
-                    <a>Alcoholic Drinks</a>
+                    <Link to="/cocktail">Cocktails</Link>
                   </li>
                   <li>
                     <a>Non-Alcoholic Drinks</a>
@@ -45,23 +47,26 @@ function Navbar() {
                 </ul>
               </li>
               <li>
-                <a>About Us</a>
+                <Link to="/aboutus">About Us</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-[2rem]">wikiDrink</a>
+          <Link to="/" className="btn btn-ghost normal-case text-[2rem]">
+            wikiDrink
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-[1rem]">
             <li>
-              <a href="./public/index.html">Home</a>
+              {/* <a href="/">Home</a> */}
+              <Link to="/">Home</Link>
             </li>
             <li tabIndex={0}>
               <details className="mr-16 ml-16">
                 <summary>Categories</summary>
                 <ul className="p-2 z-10">
                   <li>
-                    <a>Alcoholic Drinks</a>
+                    <Link to="/cocktail">Cocktails</Link>
                   </li>
                   <li>
                     <a>Non-Alcoholic Drinks</a>
@@ -76,7 +81,7 @@ function Navbar() {
               </details>
             </li>
             <li>
-              <a>About Us</a>
+              <Link to="/aboutus">About Us</Link>
             </li>
           </ul>
         </div>
